@@ -2,7 +2,7 @@
 import {  Container, Form,  Nav, Navbar, NavDropdown } from 'react-bootstrap'
 import Rate from './Rate'
 
-const Navb = ({rating,search,handelChange,handleRating}) => {
+const Navb = ({rating,text,handelChange,handleRating}) => {
   
  
   const handelOnSubmit= (e) =>{
@@ -21,14 +21,14 @@ const Navb = ({rating,search,handelChange,handleRating}) => {
         style={{ maxHeight: '50px' }}
         navbarScroll
       >
-        <Nav.Link  href="#action1">Home</Nav.Link>
-        <Nav.Link href="#action2">Tv shows</Nav.Link>
-        <NavDropdown title="Link" id="navbarScrollingDropdown">
-          <NavDropdown.Item href="#action3">My List</NavDropdown.Item>
-          <NavDropdown.Item href="#action4">Movies</NavDropdown.Item>
-          <NavDropdown.Divider />
+        <Nav.Link  href="MovieList">Go To Movie  List</Nav.Link>
+        <Nav.Link href="MovieList">Tv shows</Nav.Link>
+        <NavDropdown title="Genre" id="navbarScrollingDropdown">
+          <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+          <NavDropdown.Item href="#action4">Horror</NavDropdown.Item>
+          
           <NavDropdown.Item href="#action5">
-            Something else here
+            Family and Children
           </NavDropdown.Item>
         </NavDropdown>
         <Nav.Link href="#" disabled>
@@ -36,11 +36,11 @@ const Navb = ({rating,search,handelChange,handleRating}) => {
         </Nav.Link>
       </Nav>
       <Form className="d-flex" onSubmit={handelOnSubmit}>
-        <input type="text" placeholder='search' value={search} onChange={handelChange}/>
-       
-        
+        <input type="text" placeholder='search' value={text} onChange={handelChange}/>
+       <div className='star'>
+        <Rate rating={rating} handleRating={handleRating}/>
+        </div>
       </Form>
-      <Rate rating={rating} handleRating={handleRating}/>
     </Navbar.Collapse>
   </Container>
 </Navbar>

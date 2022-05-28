@@ -1,3 +1,10 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
+  
+}
 .App {
   text-align: center;
   background-color: #292d35;
@@ -63,12 +70,54 @@ border-radius: 10px;
 .but{
   background-color: #556480;
   color: beige;
-  border-radius: 3px;
+  border-radius: 10px;
   border: whitesmoke;
   width: 200px;
+  transition: 0.7s;
+  height: 50px;
   
-
 }
+
 .nv{
   background-color: #282c34;
+  position : fixed;
 }
+.movie-card :hover{
+  transform: scale(0.9);
+  transition: 0.7s;
+}
+.d-flex>input{
+  text-align: center;
+  width: 300px;
+}
+.star{
+  width: 200px;
+  
+}
+/* .d-flex{
+display: flex;
+justify-content: space-between;
+} */
+.detail{
+  text-align: center;
+  color: rgb(224, 214, 202);
+  height: 700px;
+  padding: 100px;
+  width:900px;
+  margin-left: 300px;
+}
+.descp{color: aqua;
+width: 500px;
+text-align: center;
+margin: 100px;
+margin-top: -2px;
+}
+.btn-search{
+  border-radius:5px ;
+  color: black;
+}
+.btnTrailer{border-radius: 5px;
+width: 200px;
+background-color: brown;
+color: white;
+font-size: medium;}

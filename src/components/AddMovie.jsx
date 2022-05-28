@@ -45,7 +45,7 @@ closeModal()
 
   return (
     <div>
-     <button className='but' onClick={openModal}>Add Movies</button>
+     <button className='but' onClick={openModal} style={{hover:"transform: scale(1.1)"}}>Add Movies</button>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
